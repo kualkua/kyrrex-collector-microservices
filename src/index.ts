@@ -1,29 +1,14 @@
 import { ClientProxyFactory, Transport } from '@nestjs/microservices';
 import { configService } from './config';
 
-export const USERS_SVC = {
-    provide: configService.getSvc().USERS,
+export const AUTH_SVC = {
+    provide: configService.getSvc().AUTH,
     useFactory: () =>
       ClientProxyFactory.create({
         transport: Transport.RMQ,
         options: {
           urls: [configService.getBrokerUri()],
-          queue: configService.getQueue().users,
-          queueOptions: {
-            durable: false,
-          },
-        },
-      }),
-  };
-
-export const LOCATIONS_SVC = {
-    provide: configService.getSvc().LOCATIONS,
-    useFactory: () =>
-      ClientProxyFactory.create({
-        transport: Transport.RMQ,
-        options: {
-          urls: [configService.getBrokerUri()],
-          queue: configService.getQueue().locations,
+          queue: configService.getQueue().auth,
           queueOptions: {
             durable: false,
           },

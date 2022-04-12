@@ -12,14 +12,12 @@ class ConfigService {
     }
     getSvc() {
         return (() => ({
-            USERS: 'USERS_SVC',
-            LOCATIONS: 'LOCATIONS_SVC',
+            AUTH: 'AUTH_SVC',
         }))();
     }
     getQueue() {
         return (() => ({
-            users: process.env.PAYMENTS_QUEUE || 'users',
-            locations: process.env.ROOMSMONEY_QUEUE || 'locations',
+            auth: process.env.AUTH_QUEUE || 'auth',
         }))();
     }
     getEnv() {

@@ -3,12 +3,10 @@ declare class ConfigService {
     constructor(env: string | undefined);
     getBrokerUri(): string;
     getSvc(): {
-        USERS: string;
-        LOCATIONS: string;
+        AUTH: string;
     };
     getQueue(): {
-        users: string;
-        locations: string;
+        auth: string;
     };
     getEnv(): string;
 }
