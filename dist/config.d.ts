@@ -4,9 +4,11 @@ declare class ConfigService {
     getBrokerUri(): string;
     getSvc(): {
         AUTH: string;
+        WL: string;
     };
     getQueue(): {
         auth: string;
+        wl: string;
     };
     getEnv(): string;
 }

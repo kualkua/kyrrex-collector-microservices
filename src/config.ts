@@ -11,12 +11,14 @@ class ConfigService {
   public getSvc() {
     return (() => ({
       AUTH: 'AUTH_SVC',
+      WL: 'WL_SVC',
     }))();
   }
 
   public getQueue() {
     return (() => ({
       auth: process.env.AUTH_QUEUE || 'auth',
+      wl: process.env.AUTH_QUEUE || 'wl',
     }))();
   }
 
