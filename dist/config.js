@@ -14,12 +14,14 @@ class ConfigService {
         return (() => ({
             AUTH: 'AUTH_SVC',
             WL: 'WL_SVC',
+            BAF: 'BAF_SVC',
         }))();
     }
     getQueue() {
         return (() => ({
             auth: process.env.AUTH_QUEUE || 'auth',
-            wl: process.env.AUTH_QUEUE || 'wl',
+            wl: process.env.WL_QUEUE || 'wl',
+            baf: process.env.BAF_QUEUE || 'baf',
         }))();
     }
     getEnv() {

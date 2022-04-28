@@ -5,10 +5,12 @@ declare class ConfigService {
     getSvc(): {
         AUTH: string;
         WL: string;
+        BAF: string;
     };
     getQueue(): {
         auth: string;
         wl: string;
+        baf: string;
     };
     getEnv(): string;
 }
