@@ -46,4 +46,19 @@ export const BAF_SVC = {
     }),
 };
 
+export const LOT_SVC = {
+  provide: configService.getSvc().LOT,
+  useFactory: () =>
+    ClientProxyFactory.create({
+      transport: Transport.RMQ,
+      options: {
+        urls: [configService.getBrokerUri()],
+        queue: configService.getQueue().lot,
+        queueOptions: {
+          durable: false,
+        },
+      },
+    }),
+};
+
 export const services = configService.getSvc();

@@ -6,11 +6,13 @@ declare class ConfigService {
         AUTH: string;
         WL: string;
         BAF: string;
+        LOT: string;
     };
     getQueue(): {
         auth: string;
         wl: string;
         baf: string;
+        lot: string;
     };
     getEnv(): string;
 }

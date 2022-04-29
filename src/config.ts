@@ -13,6 +13,7 @@ class ConfigService {
       AUTH: 'AUTH_SVC',
       WL: 'WL_SVC',
       BAF: 'BAF_SVC',
+      LOT: 'LOT_SVC',
     }))();
   }
 
@@ -21,6 +22,7 @@ class ConfigService {
       auth: process.env.AUTH_QUEUE || 'auth',
       wl: process.env.WL_QUEUE || 'wl',
       baf: process.env.BAF_QUEUE || 'baf',
+      lot: process.env.LOT_QUEUE || 'lot',
     }))();
   }
 
