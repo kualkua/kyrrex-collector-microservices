@@ -19,10 +19,10 @@ class ConfigService {
 
   public getQueue() {
     return (() => ({
-      auth: process.env.AUTH_QUEUE || 'auth',
-      wl: process.env.WL_QUEUE || 'wl',
-      baf: process.env.BAF_QUEUE || 'baf',
-      lot: process.env.LOT_QUEUE || 'lot',
+      auth: process.env.AUTH_QUEUE || 'collector.auth',
+      wl: process.env.WL_QUEUE || 'collector.wl',
+      baf: process.env.BAF_QUEUE || 'collector.baf',
+      lot: process.env.LOT_QUEUE || 'collector.lot',
     }))();
   }
 
