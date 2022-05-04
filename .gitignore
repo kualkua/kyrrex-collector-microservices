@@ -3,7 +3,6 @@
 
 # compiled output
 /node_modules
-/package-lock.json
 
 /index.d.ts
 /index.js
