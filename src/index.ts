@@ -10,7 +10,7 @@ export const AUTH_SVC = {
         urls: [configService.getBrokerUri()],
         queue: configService.getQueue().auth,
         queueOptions: {
-          durable: false,
+          durable: true,
         },
       },
     }),
@@ -25,7 +25,7 @@ export const WL_SVC = {
         urls: [configService.getBrokerUri()],
         queue: configService.getQueue().wl,
         queueOptions: {
-          durable: false,
+          durable: true,
         },
       },
     }),
@@ -40,7 +40,7 @@ export const BAF_SVC = {
         urls: [configService.getBrokerUri()],
         queue: configService.getQueue().baf,
         queueOptions: {
-          durable: false,
+          durable: true,
         },
       },
     }),
@@ -55,7 +55,7 @@ export const LOT_SVC = {
         urls: [configService.getBrokerUri()],
         queue: configService.getQueue().lot,
         queueOptions: {
-          durable: false,
+          durable: true,
         },
       },
     }),
