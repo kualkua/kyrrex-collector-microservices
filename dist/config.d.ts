@@ -7,6 +7,7 @@ declare class ConfigService {
         WL: string;
         BAF: string;
         LOT: string;
+        RATES: string;
         'AUTH-BACK-OFFICE': string;
     };
     getQueue(): {
@@ -14,6 +15,7 @@ declare class ConfigService {
         wl: string;
         baf: string;
         lot: string;
+        rates: string;
         'auth-back-office': string;
     };
     getEnv(): string;

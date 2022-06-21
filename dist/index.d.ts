@@ -14,6 +14,10 @@ export declare const LOT_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const RATES_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const AUTH_BACK_OFFICE_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
@@ -23,5 +27,6 @@ export declare const services: {
     WL: string;
     BAF: string;
     LOT: string;
+    RATES: string;
     'AUTH-BACK-OFFICE': string;
 };

@@ -61,6 +61,21 @@ export const LOT_SVC = {
     }),
 };
 
+export const RATES_SVC = {
+  provide: configService.getSvc().RATES,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().rates,
+              queueOptions: {
+                  durable: true,
+              },
+          },
+      }),
+};
+
 export const AUTH_BACK_OFFICE_SVC = {
     provide: configService.getSvc()['AUTH-BACK-OFFICE'],
     useFactory: () =>

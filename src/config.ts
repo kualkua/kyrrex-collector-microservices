@@ -14,6 +14,7 @@ class ConfigService {
       WL: 'WL_SVC',
       BAF: 'BAF_SVC',
       LOT: 'LOT_SVC',
+      RATES: 'RATES_SVC',
       'AUTH-BACK-OFFICE': 'AUTH-BACK-OFFICE_SVC',
     }))();
   }
@@ -24,6 +25,7 @@ class ConfigService {
       wl: process.env.WL_QUEUE || 'collector.wl',
       baf: process.env.BAF_QUEUE || 'collector.baf',
       lot: process.env.LOT_QUEUE || 'collector.lot',
+      rates: process.env.RATES_QUEUE || 'collector.rates',
       'auth-back-office': process.env.AUTH_BACK_OFFICE_QUEUE || 'collector.auth-back-office',
     }))();
   }
