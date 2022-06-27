@@ -23,7 +23,7 @@ class ConfigService {
   public getQueue() {
     return (() => ({
       auth: process.env.AUTH_QUEUE || 'collector.auth',
-      static: process.env.AUTH_QUEUE || 'collector.static',
+      static: process.env.STATIC_SVC || 'collector.static',
       wl: process.env.WL_QUEUE || 'collector.wl',
       baf: process.env.BAF_QUEUE || 'collector.baf',
       lot: process.env.LOT_QUEUE || 'collector.lot',
