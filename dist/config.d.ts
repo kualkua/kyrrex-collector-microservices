@@ -8,10 +8,12 @@ declare class ConfigService {
         BAF: string;
         LOT: string;
         RATES: string;
+        STATIC: string;
         'AUTH-BACK-OFFICE': string;
     };
     getQueue(): {
         auth: string;
+        static: string;
         wl: string;
         baf: string;
         lot: string;
