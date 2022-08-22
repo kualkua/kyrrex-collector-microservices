@@ -26,6 +26,10 @@ export declare const AUTH_BACK_OFFICE_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const WL_BAF: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const services: {
     AUTH: string;
     WL: string;
@@ -33,5 +37,6 @@ export declare const services: {
     LOT: string;
     RATES: string;
     STATIC: string;
+    WL_BAF: string;
     'AUTH-BACK-OFFICE': string;
 };

@@ -106,4 +106,19 @@ export const AUTH_BACK_OFFICE_SVC = {
         }),
 };
 
+export const WL_BAF = {
+  provide: configService.getSvc().WL_BAF,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().wl_baf,
+              queueOptions: {
+                  durable: true,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

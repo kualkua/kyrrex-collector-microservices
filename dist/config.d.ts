@@ -9,6 +9,7 @@ declare class ConfigService {
         LOT: string;
         RATES: string;
         STATIC: string;
+        WL_BAF: string;
         'AUTH-BACK-OFFICE': string;
     };
     getQueue(): {
@@ -18,6 +19,7 @@ declare class ConfigService {
         baf: string;
         lot: string;
         rates: string;
+        wl_baf: string;
         'auth-back-office': string;
     };
     getEnv(): string;

@@ -18,17 +18,19 @@ class ConfigService {
             LOT: 'LOT_SVC',
             RATES: 'RATES_SVC',
             STATIC: 'STATIC_SVC',
+            WL_BAF: 'WL_BAF',
             'AUTH-BACK-OFFICE': 'AUTH-BACK-OFFICE_SVC',
         }))();
     }
     getQueue() {
         return (() => ({
             auth: process.env.AUTH_QUEUE || 'collector.auth',
-            static: process.env.AUTH_QUEUE || 'collector.static',
+            static: process.env.STATIC_SVC || 'collector.static',
             wl: process.env.WL_QUEUE || 'collector.wl',
             baf: process.env.BAF_QUEUE || 'collector.baf',
             lot: process.env.LOT_QUEUE || 'collector.lot',
             rates: process.env.RATES_QUEUE || 'collector.rates',
+            wl_baf: process.env.WL_BAF || 'wl.baf',
             'auth-back-office': process.env.AUTH_BACK_OFFICE_QUEUE || 'collector.auth-back-office',
         }))();
     }
