@@ -30,6 +30,14 @@ export declare const WL_BAF: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const REFRESHES_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
+export declare const MAILER_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const services: {
     AUTH: string;
     WL: string;
@@ -39,4 +47,6 @@ export declare const services: {
     STATIC: string;
     WL_BAF: string;
     'AUTH-BACK-OFFICE': string;
+    MAILER: string;
+    REFRESHES: string;
 };
