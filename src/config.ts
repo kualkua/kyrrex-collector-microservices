@@ -18,6 +18,8 @@ class ConfigService {
       STATIC: 'STATIC_SVC',
       WL_BAF: 'WL_BAF',
       'AUTH-BACK-OFFICE': 'AUTH-BACK-OFFICE_SVC',
+      MAILER: 'MAILER_SVC',
+      REFRESHES: 'REFRESHES_SVC',
     }))();
   }
 
@@ -31,6 +33,8 @@ class ConfigService {
       rates: process.env.RATES_QUEUE || 'collector.rates',
       wl_baf: process.env.WL_BAF || 'wl.baf',
       'auth-back-office': process.env.AUTH_BACK_OFFICE_QUEUE || 'collector.auth-back-office',
+      mailer: process.env.MAILER_QUEUE || 'ms.mailer',
+      refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
     }))();
   }
 

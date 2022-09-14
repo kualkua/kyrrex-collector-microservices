@@ -121,4 +121,34 @@ export const WL_BAF = {
       }),
 };
 
+export const REFRESHES_SVC = {
+  provide: configService.getSvc().REFRESHES,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().refreshes,
+              queueOptions: {
+                  durable: true,
+              },
+          },
+      }),
+};
+
+export const MAILER_SVC = {
+  provide: configService.getSvc().MAILER,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().mailer,
+              queueOptions: {
+                  durable: true,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

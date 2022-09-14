@@ -11,6 +11,8 @@ declare class ConfigService {
         STATIC: string;
         WL_BAF: string;
         'AUTH-BACK-OFFICE': string;
+        MAILER: string;
+        REFRESHES: string;
     };
     getQueue(): {
         auth: string;
@@ -21,6 +23,8 @@ declare class ConfigService {
         rates: string;
         wl_baf: string;
         'auth-back-office': string;
+        mailer: string;
+        refreshes: string;
     };
     getEnv(): string;
 }
