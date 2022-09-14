@@ -1,6 +1,6 @@
 {
   "name": "@kyrrex/microservices",
-  "version": "1.5.2",
+  "version": "1.6.2",
   "description": "",
   "scripts": {
     "build": "tsc -p tsconfig.json"
