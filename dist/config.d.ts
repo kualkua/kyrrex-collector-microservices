@@ -12,6 +12,7 @@ declare class ConfigService {
         WL_BAF: string;
         'AUTH-BACK-OFFICE': string;
         MAILER: string;
+        USERS_ACTIONS_LOGGER: string;
         REFRESHES: string;
     };
     getQueue(): {
@@ -22,6 +23,7 @@ declare class ConfigService {
         lot: string;
         rates: string;
         wl_baf: string;
+        users_actions_logger: string;
         'auth-back-office': string;
         mailer: string;
         refreshes: string;

@@ -151,4 +151,20 @@ export const MAILER_SVC = {
       }),
 };
 
+export const USERS_ACTIONS_LOGGER_SVC = {
+  provide: configService.getSvc().USERS_ACTIONS_LOGGER,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().users_actions_logger,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

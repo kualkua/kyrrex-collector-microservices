@@ -19,6 +19,7 @@ class ConfigService {
       WL_BAF: 'WL_BAF',
       'AUTH-BACK-OFFICE': 'AUTH-BACK-OFFICE_SVC',
       MAILER: 'MAILER_SVC',
+      USERS_ACTIONS_LOGGER: 'USERS_ACTIONS_LOGGER',
       REFRESHES: 'REFRESHES_SVC',
     }))();
   }
@@ -32,6 +33,7 @@ class ConfigService {
       lot: process.env.LOT_QUEUE || 'collector.lot',
       rates: process.env.RATES_QUEUE || 'collector.rates',
       wl_baf: process.env.WL_BAF || 'wl.baf',
+      users_actions_logger: process.env.USERS_ACTIONS_LOGGER || 'ms.users-actions-logger',
       'auth-back-office': process.env.AUTH_BACK_OFFICE_QUEUE || 'collector.auth-back-office',
       mailer: process.env.MAILER_QUEUE || 'ms.mailer',
       refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
