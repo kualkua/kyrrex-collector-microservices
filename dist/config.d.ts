@@ -14,6 +14,7 @@ declare class ConfigService {
         MAILER: string;
         USERS_ACTIONS_LOGGER: string;
         REFRESHES: string;
+        MEDIATOR_SVC: string;
     };
     getQueue(): {
         auth: string;
@@ -27,6 +28,7 @@ declare class ConfigService {
         'auth-back-office': string;
         mailer: string;
         refreshes: string;
+        mediator: string;
     };
     getEnv(): string;
 }

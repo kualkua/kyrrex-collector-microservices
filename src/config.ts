@@ -21,6 +21,7 @@ class ConfigService {
       MAILER: 'MAILER_SVC',
       USERS_ACTIONS_LOGGER: 'USERS_ACTIONS_LOGGER',
       REFRESHES: 'REFRESHES_SVC',
+      MEDIATOR_SVC: 'MEDIATOR_SVC',
     }))();
   }
 
@@ -37,6 +38,7 @@ class ConfigService {
       'auth-back-office': process.env.AUTH_BACK_OFFICE_QUEUE || 'collector.auth-back-office',
       mailer: process.env.MAILER_QUEUE || 'ms.mailer',
       refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
+      mediator: process.env.MEDIATOR_QUEUE || 'collector.mediator',
     }))();
   }
 

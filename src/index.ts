@@ -167,4 +167,20 @@ export const USERS_ACTIONS_LOGGER_SVC = {
       }),
 };
 
+export const MEDIATOR_SVC = {
+  provide: configService.getSvc().MEDIATOR_SVC,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().mediator,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();
