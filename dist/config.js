@@ -22,6 +22,7 @@ class ConfigService {
             'AUTH-BACK-OFFICE': 'AUTH-BACK-OFFICE_SVC',
             MAILER: 'MAILER_SVC',
             USERS_ACTIONS_LOGGER: 'USERS_ACTIONS_LOGGER',
+            PAYMENTS: 'PAYMENTS_SVC',
             REFRESHES: 'REFRESHES_SVC',
             MEDIATOR_SVC: 'MEDIATOR_SVC',
         }))();
@@ -38,6 +39,7 @@ class ConfigService {
             users_actions_logger: process.env.USERS_ACTIONS_LOGGER || 'ms.users-actions-logger',
             'auth-back-office': process.env.AUTH_BACK_OFFICE_QUEUE || 'collector.auth-back-office',
             mailer: process.env.MAILER_QUEUE || 'ms.mailer',
+            payments: process.env.PAYMENTS_QUEUE || 'collector.payments',
             refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
             mediator: process.env.MEDIATOR_QUEUE || 'collector.mediator',
         }))();

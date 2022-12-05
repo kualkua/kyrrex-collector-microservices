@@ -57,6 +57,7 @@ export declare const services: {
     'AUTH-BACK-OFFICE': string;
     MAILER: string;
     USERS_ACTIONS_LOGGER: string;
+    PAYMENTS: string;
     REFRESHES: string;
     MEDIATOR_SVC: string;
 };
