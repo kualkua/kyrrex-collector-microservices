@@ -34,5 +34,6 @@ declare class ConfigService {
     };
     getEnv(): string;
 }
+
 declare const configService: ConfigService;
 export { configService };
