@@ -46,6 +46,10 @@ export declare const USERS_ACTIONS_LOGGER_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const CHAINCORE_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const MEDIATOR_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
@@ -62,6 +66,7 @@ export declare const services: {
     MAILER: string;
     USERS_ACTIONS_LOGGER: string;
     PAYMENTS: string;
+    CHAINCORE: string;
     REFRESHES: string;
     MEDIATOR_SVC: string;
 };

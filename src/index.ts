@@ -182,6 +182,22 @@ export const USERS_ACTIONS_LOGGER_SVC = {
       }),
 };
 
+export const CHAINCORE_SVC = {
+  provide: configService.getSvc().CHAINCORE,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().chaincore,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const MEDIATOR_SVC = {
   provide: configService.getSvc().MEDIATOR_SVC,
   useFactory: () =>

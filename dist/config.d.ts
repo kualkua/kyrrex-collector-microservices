@@ -14,6 +14,7 @@ declare class ConfigService {
         MAILER: string;
         USERS_ACTIONS_LOGGER: string;
         PAYMENTS: string;
+        CHAINCORE: string;
         REFRESHES: string;
         MEDIATOR_SVC: string;
     };
@@ -29,6 +30,7 @@ declare class ConfigService {
         'auth-back-office': string;
         mailer: string;
         payments: string;
+        chaincore: string;
         refreshes: string;
         mediator: string;
     };
