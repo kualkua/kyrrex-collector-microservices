@@ -214,4 +214,20 @@ export const MEDIATOR_SVC = {
       }),
 };
 
+export const MEMBERS_SVC = {
+  provide: configService.getSvc().MEMBERS_SVC,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().memebers,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

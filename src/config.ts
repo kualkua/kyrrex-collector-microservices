@@ -24,6 +24,7 @@ class ConfigService {
       CHAINCORE: 'CHAINCORE_SVC',
       REFRESHES: 'REFRESHES_SVC',
       MEDIATOR_SVC: 'MEDIATOR_SVC',
+      MEMBERS_SVC: 'MEMBERS_SVC',
     }))();
   }
 
@@ -43,6 +44,7 @@ class ConfigService {
       chaincore: process.env.CHAINCORE_QUEUE || 'collector.chaincore',
       refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
       mediator: process.env.MEDIATOR_QUEUE || 'collector.mediator',
+      memebers: process.env.MEMBERS_QUEUE || 'collector.members',
     }))();
   }
 
