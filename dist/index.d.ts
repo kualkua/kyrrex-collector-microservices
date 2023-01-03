@@ -54,6 +54,10 @@ export declare const MEDIATOR_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const MEMBERS_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const services: {
     AUTH: string;
     WL: string;
@@ -69,4 +73,5 @@ export declare const services: {
     CHAINCORE: string;
     REFRESHES: string;
     MEDIATOR_SVC: string;
+    MEMBERS_SVC: string;
 };
