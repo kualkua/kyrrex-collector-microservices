@@ -230,4 +230,20 @@ export const MEMBERS_SVC = {
       }),
 };
 
+export const TRANSLATES_SVC = {
+    provide: configService.getSvc().TRANSLATES_SVC,
+    useFactory: () =>
+        ClientProxyFactory.create({
+            transport: Transport.RMQ,
+            options: {
+                urls: [configService.getBrokerUri()],
+                queue: configService.getQueue().translates,
+                queueOptions: {
+                    durable: true,
+                    prefetchCount: 10,
+                },
+            },
+        }),
+};
+
 export const services = configService.getSvc();

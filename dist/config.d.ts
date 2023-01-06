@@ -18,6 +18,7 @@ declare class ConfigService {
         REFRESHES: string;
         MEDIATOR_SVC: string;
         MEMBERS_SVC: string;
+        TRANSLATES_SVC: string;
     };
     getQueue(): {
         auth: string;
@@ -35,6 +36,7 @@ declare class ConfigService {
         refreshes: string;
         mediator: string;
         members: string;
+        translates: string;
     };
     getEnv(): string;
 }

@@ -25,6 +25,7 @@ class ConfigService {
       REFRESHES: 'REFRESHES_SVC',
       MEDIATOR_SVC: 'MEDIATOR_SVC',
       MEMBERS_SVC: 'MEMBERS_SVC',
+      TRANSLATES_SVC: 'TRANSLATES_SVC',
     }))();
   }
 
@@ -45,6 +46,7 @@ class ConfigService {
       refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
       mediator: process.env.MEDIATOR_QUEUE || 'collector.mediator',
       memebers: process.env.MEMBERS_QUEUE || 'collector.members',
+      translates: process.env.TRANSLATES_QUEUE || 'collector.translates',
     }))();
   }
 
