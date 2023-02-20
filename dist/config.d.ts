@@ -35,7 +35,7 @@ declare class ConfigService {
         chaincore: string;
         refreshes: string;
         mediator: string;
-        members: string;
+        memebers: string;
         translates: string;
     };
     getEnv(): string;

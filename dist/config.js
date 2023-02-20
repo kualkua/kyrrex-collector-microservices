@@ -46,7 +46,7 @@ class ConfigService {
             chaincore: process.env.CHAINCORE_QUEUE || 'collector.chaincore',
             refreshes: process.env.REFRESHES_QUEUE || 'ms.refreshes',
             mediator: process.env.MEDIATOR_QUEUE || 'collector.mediator',
-            members: process.env.MEMBERS_QUEUE || 'collector.members',
+            memebers: process.env.MEMBERS_QUEUE || 'collector.members',
             translates: process.env.TRANSLATES_QUEUE || 'collector.translates',
         }))();
     }
