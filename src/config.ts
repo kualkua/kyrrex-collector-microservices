@@ -26,6 +26,7 @@ class ConfigService {
       MEDIATOR_SVC: 'MEDIATOR_SVC',
       MEMBERS_SVC: 'MEMBERS_SVC',
       TRANSLATES_SVC: 'TRANSLATES_SVC',
+      RECAPTCHA_SVC: 'RECAPTCHA_SVC',
     }))();
   }
 
@@ -47,6 +48,7 @@ class ConfigService {
       mediator: process.env.MEDIATOR_QUEUE || 'collector.mediator',
       memebers: process.env.MEMBERS_QUEUE || 'collector.members',
       translates: process.env.TRANSLATES_QUEUE || 'collector.translates',
+      recaptcha: process.env.RECAPTCHA_QUEUE || 'collector.recaptcha',
     }))();
   }
 

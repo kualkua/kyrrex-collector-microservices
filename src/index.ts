@@ -246,4 +246,20 @@ export const TRANSLATES_SVC = {
         }),
 };
 
+export const RECAPTCHA_SVC = {
+    provide: configService.getSvc().RECAPTCHA_SVC,
+    useFactory: () =>
+        ClientProxyFactory.create({
+            transport: Transport.RMQ,
+            options: {
+                urls: [configService.getBrokerUri()],
+                queue: configService.getQueue().recaptcha,
+                queueOptions: {
+                    durable: true,
+                    prefetchCount: 10,
+                },
+            },
+        }),
+  };
+
 export const services = configService.getSvc();
