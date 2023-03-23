@@ -16,6 +16,21 @@ export const AUTH_SVC = {
     }),
 };
 
+export const TRANSACTIONS_MONITORING_SVC = {
+  provide: configService.getSvc().TRANSACTIONS_MONITORING,
+  useFactory: () =>
+    ClientProxyFactory.create({
+      transport: Transport.RMQ,
+      options: {
+        urls: [configService.getBrokerUri()],
+        queue: configService.getQueue().transactions_monitoring,
+        queueOptions: {
+          durable: true,
+        },
+      },
+    }),
+};
+
 export const WL_SVC = {
   provide: configService.getSvc().WL,
   useFactory: () =>

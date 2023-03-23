@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.services = exports.TRANSLATES_SVC = exports.MEMBERS_SVC = exports.MEDIATOR_SVC = exports.CHAINCORE_SVC = exports.USERS_ACTIONS_LOGGER_SVC = exports.PAYMENTS_SVC = exports.MAILER_SVC = exports.REFRESHES_SVC = exports.WL_BAF = exports.AUTH_BACK_OFFICE_SVC = exports.STATIC_SVC = exports.RATES_SVC = exports.LOT_SVC = exports.BAF_SVC = exports.WL_SVC = exports.AUTH_SVC = void 0;
+exports.services = exports.RECAPTCHA_SVC = exports.TRANSLATES_SVC = exports.MEMBERS_SVC = exports.MEDIATOR_SVC = exports.CHAINCORE_SVC = exports.USERS_ACTIONS_LOGGER_SVC = exports.PAYMENTS_SVC = exports.MAILER_SVC = exports.REFRESHES_SVC = exports.WL_BAF = exports.AUTH_BACK_OFFICE_SVC = exports.STATIC_SVC = exports.RATES_SVC = exports.LOT_SVC = exports.BAF_SVC = exports.WL_SVC = exports.TRANSACTIONS_MONITORING_SVC = exports.AUTH_SVC = void 0;
 const microservices_1 = require("@nestjs/microservices");
 const config_1 = require("./config");
 exports.AUTH_SVC = {
@@ -10,6 +10,19 @@ exports.AUTH_SVC = {
         options: {
             urls: [config_1.configService.getBrokerUri()],
             queue: config_1.configService.getQueue().auth,
+            queueOptions: {
+                durable: true,
+            },
+        },
+    }),
+};
+exports.TRANSACTIONS_MONITORING_SVC = {
+    provide: config_1.configService.getSvc().TRANSACTIONS_MONITORING,
+    useFactory: () => microservices_1.ClientProxyFactory.create({
+        transport: microservices_1.Transport.RMQ,
+        options: {
+            urls: [config_1.configService.getBrokerUri()],
+            queue: config_1.configService.getQueue().transactions_monitoring,
             queueOptions: {
                 durable: true,
             },

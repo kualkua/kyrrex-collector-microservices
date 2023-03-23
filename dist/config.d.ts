@@ -4,6 +4,7 @@ declare class ConfigService {
     getBrokerUri(): string;
     getSvc(): {
         AUTH: string;
+        TRANSACTIONS_MONITORING: string;
         WL: string;
         BAF: string;
         LOT: string;
@@ -23,6 +24,7 @@ declare class ConfigService {
     };
     getQueue(): {
         auth: string;
+        transactions_monitoring: string;
         static: string;
         wl: string;
         baf: string;

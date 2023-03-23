@@ -13,6 +13,7 @@ class ConfigService {
     getSvc() {
         return (() => ({
             AUTH: 'AUTH_SVC',
+            TRANSACTIONS_MONITORING: 'TRANSACTIONS_MONITORING_SVC',
             WL: 'WL_SVC',
             BAF: 'BAF_SVC',
             LOT: 'LOT_SVC',
@@ -34,6 +35,7 @@ class ConfigService {
     getQueue() {
         return (() => ({
             auth: process.env.AUTH_QUEUE || 'collector.auth',
+            transactions_monitoring: process.env.AUTH_QUEUE || 'collector.transactions.monitoring',
             static: process.env.STATIC_SVC || 'collector.static',
             wl: process.env.WL_QUEUE || 'collector.wl',
             baf: process.env.BAF_QUEUE || 'collector.baf',
