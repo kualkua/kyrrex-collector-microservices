@@ -31,6 +31,21 @@ export const TRANSACTIONS_MONITORING_SVC = {
     }),
 };
 
+export const LAUNCHPAD_SVC = {
+  provide: configService.getSvc().LAUNCHPAD,
+  useFactory: () =>
+    ClientProxyFactory.create({
+      transport: Transport.RMQ,
+      options: {
+        urls: [configService.getBrokerUri()],
+        queue: configService.getQueue().launchpad,
+        queueOptions: {
+          durable: true,
+        },
+      },
+    }),
+};
+
 export const WL_SVC = {
   provide: configService.getSvc().WL,
   useFactory: () =>
