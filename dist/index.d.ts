@@ -6,6 +6,10 @@ export declare const TRANSACTIONS_MONITORING_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const WL_TRANSACTIONS_MONITORING: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const LAUNCHPAD_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;

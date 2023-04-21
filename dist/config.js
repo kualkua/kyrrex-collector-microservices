@@ -14,6 +14,7 @@ class ConfigService {
         return (() => ({
             AUTH: 'AUTH_SVC',
             TRANSACTIONS_MONITORING: 'TRANSACTIONS_MONITORING_SVC',
+            WL_TRANSACTIONS_MONITORING: 'WL_TRANSACTIONS_MONITORING',
             LAUNCHPAD: 'LAUNCHPAD_SVC',
             WL: 'WL_SVC',
             BAF: 'BAF_SVC',
@@ -37,6 +38,7 @@ class ConfigService {
         return (() => ({
             auth: process.env.AUTH_QUEUE || 'collector.auth',
             transactions_monitoring: process.env.AUTH_QUEUE || 'collector.transactions.monitoring',
+            wl_transactions_monitoring: process.env.WL_TRANSACTIONS_MONITORING || 'wl.transactions.monitoring',
             launchpad: process.env.LAUNCHPAD_QUEUE || 'collector.launchpad',
             static: process.env.STATIC_SVC || 'collector.static',
             wl: process.env.WL_QUEUE || 'collector.wl',
