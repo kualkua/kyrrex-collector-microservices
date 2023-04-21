@@ -81,6 +81,7 @@ export declare const RECAPTCHA_SVC: {
 export declare const services: {
     AUTH: string;
     TRANSACTIONS_MONITORING: string;
+    WL_TRANSACTIONS_MONITORING: string;
     LAUNCHPAD: string;
     WL: string;
     BAF: string;
