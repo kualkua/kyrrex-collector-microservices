@@ -32,7 +32,7 @@ export const TRANSACTIONS_MONITORING_SVC = {
 };
 
 export const WL_TRANSACTIONS_MONITORING = {
-  provide: configService.getSvc().WL_BAF,
+  provide: configService.getSvc().WL_TRANSACTIONS_MONITORING,
   useFactory: () =>
     ClientProxyFactory.create({
       transport: Transport.RMQ,
