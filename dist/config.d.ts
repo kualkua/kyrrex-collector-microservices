@@ -5,6 +5,7 @@ declare class ConfigService {
     getSvc(): {
         AUTH: string;
         TRANSACTIONS_MONITORING: string;
+        WL_TRANSACTIONS_MONITORING: string;
         LAUNCHPAD: string;
         WL: string;
         BAF: string;
@@ -26,6 +27,7 @@ declare class ConfigService {
     getQueue(): {
         auth: string;
         transactions_monitoring: string;
+        wl_transactions_monitoring: string;
         launchpad: string;
         static: string;
         wl: string;
