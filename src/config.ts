@@ -11,6 +11,7 @@ class ConfigService {
   public getSvc() {
     return (() => ({
       AUTH: 'AUTH_SVC',
+      COLLECTOR_GATEWAY_SVC: 'COLLECTOR_GATEWAY_SVC',
       TRANSACTIONS_MONITORING: 'TRANSACTIONS_MONITORING_SVC',
       WL_TRANSACTIONS_MONITORING: 'WL_TRANSACTIONS_MONITORING',
       LAUNCHPAD: 'LAUNCHPAD_SVC',
@@ -36,6 +37,7 @@ class ConfigService {
   public getQueue() {
     return (() => ({
       auth: process.env.AUTH_QUEUE || 'collector.auth',
+      collector_gateway: process.env.COLLECTOR_GATEWAY_QUEUE || 'collector.gateway',
       transactions_monitoring: process.env.AUTH_QUEUE || 'collector.transactions.monitoring',
       wl_transactions_monitoring: process.env.WL_TRANSACTIONS_MONITORING || 'wl.transactions.monitoring',
       launchpad: process.env.LAUNCHPAD_QUEUE || 'collector.launchpad',
