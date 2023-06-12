@@ -24,6 +24,7 @@ declare class ConfigService {
         MEMBERS_SVC: string;
         TRANSLATES_SVC: string;
         RECAPTCHA_SVC: string;
+        MESSAGES_MEDIATOR_SVC: string;
     };
     getQueue(): {
         auth: string;
@@ -47,6 +48,7 @@ declare class ConfigService {
         memebers: string;
         translates: string;
         recaptcha: string;
+        messages_mediator: string;
     };
     getEnv(): string;
 }
