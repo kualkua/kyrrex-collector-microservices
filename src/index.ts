@@ -322,4 +322,20 @@ export const RECAPTCHA_SVC = {
         }),
   };
 
+export const MESSAGES_MEDIATOR_SVC = {
+  provide: configService.getSvc().MESSAGES_MEDIATOR_SVC,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().messages_mediator,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

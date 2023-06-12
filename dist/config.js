@@ -33,6 +33,7 @@ class ConfigService {
             MEMBERS_SVC: 'MEMBERS_SVC',
             TRANSLATES_SVC: 'TRANSLATES_SVC',
             RECAPTCHA_SVC: 'RECAPTCHA_SVC',
+            MESSAGES_MEDIATOR_SVC: 'MESSAGES_MEDIATOR_SVC',
         }))();
     }
     getQueue() {
@@ -58,6 +59,7 @@ class ConfigService {
             memebers: process.env.MEMBERS_QUEUE || 'collector.members',
             translates: process.env.TRANSLATES_QUEUE || 'collector.translates',
             recaptcha: process.env.RECAPTCHA_QUEUE || 'collector.recaptcha',
+            messages_mediator: process.env.MESSAGES_MEDIATOR_QUEUE || 'collector.messages_mediator',
         }))();
     }
     getEnv() {
