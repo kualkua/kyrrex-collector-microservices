@@ -86,6 +86,10 @@ export declare const MESSAGES_MEDIATOR_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const IP_INFO_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const services: {
     AUTH: string;
     COLLECTOR_GATEWAY_SVC: string;
@@ -109,4 +113,5 @@ export declare const services: {
     TRANSLATES_SVC: string;
     RECAPTCHA_SVC: string;
     MESSAGES_MEDIATOR_SVC: string;
+    IP_INFO_SVC: string;
 };

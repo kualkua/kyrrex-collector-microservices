@@ -296,4 +296,18 @@ exports.MESSAGES_MEDIATOR_SVC = {
         },
     }),
 };
+exports.IP_INFO_SVC = {
+    provide: config_1.configService.getSvc().IP_INFO_SVC,
+    useFactory: () => microservices_1.ClientProxyFactory.create({
+        transport: microservices_1.Transport.RMQ,
+        options: {
+            urls: [config_1.configService.getBrokerUri()],
+            queue: config_1.configService.getQueue().ip_info,
+            queueOptions: {
+                durable: true,
+                prefetchCount: 10,
+            },
+        },
+    }),
+};
 exports.services = config_1.configService.getSvc();

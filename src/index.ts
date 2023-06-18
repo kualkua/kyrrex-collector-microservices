@@ -338,4 +338,20 @@ export const MESSAGES_MEDIATOR_SVC = {
       }),
 };
 
+export const IP_INFO_SVC = {
+  provide: configService.getSvc().IP_INFO_SVC,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().ip_info,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();
