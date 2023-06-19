@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.services = exports.MESSAGES_MEDIATOR_SVC = exports.RECAPTCHA_SVC = exports.TRANSLATES_SVC = exports.MEMBERS_SVC = exports.MEDIATOR_SVC = exports.CHAINCORE_SVC = exports.USERS_ACTIONS_LOGGER_SVC = exports.PAYMENTS_SVC = exports.MAILER_SVC = exports.REFRESHES_SVC = exports.WL_BAF = exports.AUTH_BACK_OFFICE_SVC = exports.STATIC_SVC = exports.RATES_SVC = exports.LOT_SVC = exports.BAF_SVC = exports.WL_SVC = exports.LAUNCHPAD_SVC = exports.WL_TRANSACTIONS_MONITORING = exports.TRANSACTIONS_MONITORING_SVC = exports.COLLECTOR_GATEWAY_SVC = exports.AUTH_SVC = void 0;
+exports.services = exports.IP_INFO_SVC = exports.MESSAGES_MEDIATOR_SVC = exports.RECAPTCHA_SVC = exports.TRANSLATES_SVC = exports.MEMBERS_SVC = exports.MEDIATOR_SVC = exports.CHAINCORE_SVC = exports.USERS_ACTIONS_LOGGER_SVC = exports.PAYMENTS_SVC = exports.MAILER_SVC = exports.REFRESHES_SVC = exports.WL_BAF = exports.AUTH_BACK_OFFICE_SVC = exports.STATIC_SVC = exports.RATES_SVC = exports.LOT_SVC = exports.BAF_SVC = exports.WL_SVC = exports.LAUNCHPAD_SVC = exports.WL_TRANSACTIONS_MONITORING = exports.TRANSACTIONS_MONITORING_SVC = exports.COLLECTOR_GATEWAY_SVC = exports.AUTH_SVC = void 0;
 const microservices_1 = require("@nestjs/microservices");
 const config_1 = require("./config");
 exports.AUTH_SVC = {
