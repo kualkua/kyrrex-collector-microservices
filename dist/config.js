@@ -35,6 +35,7 @@ class ConfigService {
             RECAPTCHA_SVC: 'RECAPTCHA_SVC',
             MESSAGES_MEDIATOR_SVC: 'MESSAGES_MEDIATOR_SVC',
             IP_INFO_SVC: 'IP_INFO_SVC',
+            BONUSES_SVC: 'BONUSES_SVC',
         }))();
     }
     getQueue() {
@@ -62,6 +63,7 @@ class ConfigService {
             recaptcha: process.env.RECAPTCHA_QUEUE || 'collector.recaptcha',
             messages_mediator: process.env.MESSAGES_MEDIATOR_QUEUE || 'collector.messages_mediator',
             ip_info: process.env.IP_INFO_QUEUE || 'collector.ip_info',
+            bonuses: process.env.BONUSES_QUEUE || 'collector.bonuses',
         }))();
     }
     getEnv() {
