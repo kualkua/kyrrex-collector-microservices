@@ -370,4 +370,20 @@ export const VIRTUAL_CARD_SVC = {
       }),
 };
 
+export const BONUSES_SVC = {
+  provide: configService.getSvc().BONUSES_SVC,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().bonuses,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

@@ -34,6 +34,7 @@ class ConfigService {
       MESSAGES_MEDIATOR_SVC: 'MESSAGES_MEDIATOR_SVC',
       IP_INFO_SVC: 'IP_INFO_SVC',
       VIRTUAL_CARD_SVC: 'VIRTUAL_CARD_SVC',
+      BONUSES_SVC: 'BONUSES_SVC',
     }))();
   }
 
@@ -63,6 +64,7 @@ class ConfigService {
       messages_mediator: process.env.MESSAGES_MEDIATOR_QUEUE || 'collector.messages_mediator',
       ip_info: process.env.IP_INFO_QUEUE || 'collector.ip_info',
       virtual_card: process.env.VIRTUAL_CARD_QUEUE || 'collector.virtual_card',
+      bonuses: process.env.BONUSES_QUEUE || 'collector.bonuses',
     }))();
   }
 
