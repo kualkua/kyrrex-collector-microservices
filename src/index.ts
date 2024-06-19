@@ -354,4 +354,20 @@ export const IP_INFO_SVC = {
       }),
 };
 
+export const VIRTUAL_CARD_SVC = {
+  provide: configService.getSvc().VIRTUAL_CARD_SVC,
+  useFactory: () =>
+      ClientProxyFactory.create({
+          transport: Transport.RMQ,
+          options: {
+              urls: [configService.getBrokerUri()],
+              queue: configService.getQueue().virtual_card,
+              queueOptions: {
+                  durable: true,
+                  prefetchCount: 10,
+              },
+          },
+      }),
+};
+
 export const services = configService.getSvc();

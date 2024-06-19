@@ -26,6 +26,7 @@ declare class ConfigService {
         RECAPTCHA_SVC: string;
         MESSAGES_MEDIATOR_SVC: string;
         IP_INFO_SVC: string;
+        VIRTUAL_CARD_SVC: string;
     };
     getQueue(): {
         auth: string;
@@ -51,6 +52,7 @@ declare class ConfigService {
         recaptcha: string;
         messages_mediator: string;
         ip_info: string;
+        virtual_card: string;
     };
     getEnv(): string;
 }
