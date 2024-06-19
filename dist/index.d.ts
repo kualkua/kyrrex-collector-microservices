@@ -90,6 +90,10 @@ export declare const IP_INFO_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
 };
+export declare const VIRTUAL_CARD_SVC: {
+    provide: string;
+    useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
+};
 export declare const BONUSES_SVC: {
     provide: string;
     useFactory: () => import("@nestjs/microservices").ClientProxy & import("@nestjs/microservices").Closeable;
@@ -118,5 +122,6 @@ export declare const services: {
     RECAPTCHA_SVC: string;
     MESSAGES_MEDIATOR_SVC: string;
     IP_INFO_SVC: string;
+    VIRTUAL_CARD_SVC: string;
     BONUSES_SVC: string;
 };
